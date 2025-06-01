@@ -1,5 +1,6 @@
 {
     "compilerOptions": {
+        "types": ["vite/client"],
         /* Language and Environment */
         "target": "ESNext" /* Use the latest ECMAScript features for better performance and compatibility. */,
         "module": "ESNext" /* Use ESNext modules for modern JavaScript. */,
@@ -34,11 +35,17 @@
         "paths": {
             /* Define custom import paths for cleaner imports. */
             "@components/*": ["src/components/*"],
-            "@utils/*": ["src/utils/*"]
+            "@utils/*": ["src/utils/*"],
+            "@pages/*": ["src/pages/*"],
+            "@store/*": ["src/store/*"],
+            "@api/*": ["src/features/api/*"]
         }
-        
     },
-    "include": ["src"] /* Include all files in the 'src' directory. */,
+    "include": [
+        "src/**/*.ts",
+        "src/**/*.d.ts",
+        "src/**/*.tsx"
+    ] /* Include all files in the 'src' directory. */,
     "exclude": [
         "node_modules",
         "dist"
